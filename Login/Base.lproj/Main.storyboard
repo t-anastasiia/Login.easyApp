@@ -192,12 +192,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="WeZ-0i-VUq"/>
                     <connections>
+                        <outlet property="dontHaveAccountLabel" destination="C6m-d9-t3x" id="J4C-Ch-qqy"/>
+                        <outlet property="emailTextField" destination="9vf-S2-n9J" id="oQx-6x-Ofl"/>
                         <outlet property="loginButton" destination="Xmr-go-YaG" id="hnK-Z2-6FF"/>
+                        <outlet property="passwordTextField" destination="LZF-ps-e2l" id="Zug-fP-otc"/>
                         <outlet property="singUpButton" destination="e9p-zg-Oxm" id="RRz-Y6-Sa7"/>
-                        <outletCollection property="textFieldCollection" destination="9vf-S2-n9J" collectionClass="NSMutableArray" id="0Ui-o9-HJt"/>
-                        <outletCollection property="textFieldCollection" destination="LZF-ps-e2l" collectionClass="NSMutableArray" id="4TW-BR-amR"/>
                         <outletCollection property="fullnessScaleCollection" destination="cPU-56-jIR" collectionClass="NSMutableArray" id="hJa-Hc-3Vo"/>
                         <outletCollection property="fullnessScaleCollection" destination="7EC-eL-S9d" collectionClass="NSMutableArray" id="cfc-lA-PWv"/>
+                        <segue destination="P7g-Ex-fqs" kind="show" identifier="goToHomePage" id="qMy-5A-igh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3wU-EZ-m1f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
