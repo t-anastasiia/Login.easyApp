@@ -49,7 +49,12 @@ class ViewController: UIViewController {
         {
             performSegue(withIdentifier: "goToHomePage", sender: sender)
         } else {
-            // TODO: Show Error
+            let alert = UIAlertController(title: "Error".localized, message: "Wrong password or e-mail".localized, preferredStyle: .alert)
+            
+            let action = UIAlertAction(title: "OK", style: .destructive)
+            alert.addAction(action)
+            
+            present(alert, animated: true)
         }
     }
     

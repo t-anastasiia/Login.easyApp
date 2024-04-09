@@ -1,0 +1,21 @@
+
+/* Class = "UITextField"; placeholder = "e-mail"; ObjectID = "9vf-S2-n9J"; */
+"9vf-S2-n9J.placeholder" = "e-mail";
+
+/* Class = "UILabel"; text = "Don't have an account?"; ObjectID = "C6m-d9-t3x"; */
+"C6m-d9-t3x.text" = "Еще нет акаунта?";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "LZF-ps-e2l"; */
+"LZF-ps-e2l.placeholder" = "пароль";
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "Xmr-go-YaG"; */
+"Xmr-go-YaG.configuration.title" = "Войти";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Xmr-go-YaG"; */
+"Xmr-go-YaG.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Sing up "; ObjectID = "e9p-zg-Oxm"; */
+"e9p-zg-Oxm.configuration.title" = "Зарегистрироваться";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "e9p-zg-Oxm"; */
+"e9p-zg-Oxm.normalTitle" = "Button";

@@ -180,6 +180,7 @@
                         <viewLayoutGuide key="safeArea" id="CTG-A7-a6n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="9Xf-wL-NGb" firstAttribute="leading" secondItem="CTG-A7-a6n" secondAttribute="leading" constant="30" id="0vC-MA-ZCf"/>
                             <constraint firstItem="9Xf-wL-NGb" firstAttribute="centerX" secondItem="SPw-Ey-aJA" secondAttribute="centerX" id="2X3-Mb-Fu0"/>
                             <constraint firstItem="9Xf-wL-NGb" firstAttribute="centerX" secondItem="SPw-Ey-aJA" secondAttribute="centerX" id="3yv-Eh-AJo"/>
                             <constraint firstItem="9Xf-wL-NGb" firstAttribute="top" secondItem="dpi-Vh-FRa" secondAttribute="bottom" constant="15" id="LfT-OQ-FjX"/>
@@ -188,6 +189,7 @@
                             <constraint firstItem="dpi-Vh-FRa" firstAttribute="centerX" secondItem="SPw-Ey-aJA" secondAttribute="centerX" id="ie1-Qa-s7c"/>
                             <constraint firstItem="dpi-Vh-FRa" firstAttribute="leading" secondItem="SPw-Ey-aJA" secondAttribute="leading" constant="30" id="ihs-3e-5if"/>
                             <constraint firstItem="dpi-Vh-FRa" firstAttribute="centerY" secondItem="SPw-Ey-aJA" secondAttribute="centerY" constant="-50" id="vgS-Tm-3Ph"/>
+                            <constraint firstItem="CTG-A7-a6n" firstAttribute="trailing" secondItem="9Xf-wL-NGb" secondAttribute="trailing" constant="30" id="ySC-zc-3y1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WeZ-0i-VUq"/>
