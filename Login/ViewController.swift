@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        configureButtons(loginButton)
+        setupLoginButton(for: false)
         emailTextField.delegate = self
         passwordTextField.delegate = self
         emailTextField.becomeFirstResponder()
@@ -48,6 +48,7 @@ class ViewController: UIViewController {
         if email == mockEmail, password == mockPassword
         {
             performSegue(withIdentifier: "goToHomePage", sender: sender)
+            
         } else {
             let alert = UIAlertController(title: "Error".localized, message: "Wrong password or e-mail".localized, preferredStyle: .alert)
             
@@ -63,12 +64,23 @@ class ViewController: UIViewController {
     }
     
     // MARK: Methods
-    private func configureButtons(_ sender: UIButton)
+    private func setupLoginButton(for active: Bool)
     {
-        sender.layer.shadowRadius = 6
-        sender.layer.shadowOpacity = 0.8
-        sender.layer.shadowOffset = CGSize(width: 3, height: 3)
-        sender.layer.shadowColor = mainColor.cgColor
+        loginButton.layer.shadowRadius = 6
+        loginButton.layer.shadowOpacity = 0.8
+        loginButton.layer.shadowOffset = CGSize(width: 3, height: 3)
+        switch active
+        {
+            case true:
+                loginButton.backgroundColor = mainColor
+                loginButton.layer.shadowColor = mainColor.cgColor
+                loginButton.isUserInteractionEnabled = true
+            case false:
+                loginButton.backgroundColor = .systemGray4
+                loginButton.layer.shadowColor = UIColor.systemGray4.cgColor
+                loginButton.isUserInteractionEnabled = false
+        }
+        
     }
 
     private func makeErrorField(for textField: UITextField)
@@ -91,21 +103,22 @@ extension ViewController: UITextFieldDelegate
 {
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        guard let text = textField.text?.trimmingCharacters(in:     .whitespacesAndNewlines), !text.isEmpty else { return }
+        let text = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        
         switch textField
         {
             case emailTextField:
+                email = text
                 if text.isValidEmail
                 {
-                    email = text
                     emailFullnessScale.backgroundColor = .systemGreen
                 } else {
                     makeErrorField(for: emailTextField)
                 }
             case passwordTextField:
+                password = text
                 if text.isValidPassword
                 {
-                    password = text
                     passwordFullnessScale.backgroundColor = .systemGreen
                 } else {
                     makeErrorField(for: passwordTextField)
@@ -113,6 +126,9 @@ extension ViewController: UITextFieldDelegate
             default:
                 print(text)
         }
+        
+        let active = password.isValidPassword && email.isValidEmail
+        setupLoginButton(for: active)
         
     }
 }
